@@ -1,0 +1,238 @@
+#mainContainer, #contentWrapper, #billInputContainer, 
+#stackPages, #subMenuStackPages, #billProductContainer{
+    background-color: #f6f9fc;
+}
+
+QLineEdit:focus{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #5DADE2; 
+}
+
+QScrollArea{
+    background: #f6f9fc;
+    border:none;
+}
+
+QScrollBar:vertical{
+    background: #f6f9fc;
+    width: 7px;
+    margin: 0;
+    border: none;  /* Remove border */
+    border-radius: 3px; /* Add border-radius */
+}
+
+QScrollBar::handle:vertical {
+    background: #7bae38;
+    min-height: 7px;
+    border-radius: 3px; /* Add border-radius */
+}
+
+#billPreviewPage{
+    background-color: #f6f9fc;
+}
+
+#wrapPrintFunction{
+    background-color: #fff;
+}
+
+#wrapPreviewBill{
+    background-color: #fff;
+}
+
+#scrollAreaWidgetContents{
+    background-color: #f6f9fc;
+}
+#scrollAreaWidgetContents_2{
+    background-color: #f6f9fc;
+}
+#blankLineEdit{
+    border: none !important; 
+}
+
+#blankLineEdit:focus{
+    border: 1px solid transparent !important;
+    border-bottom: 0px solid transparent !important; 
+}
+
+#billHeaderContainer, #customerInputContainer, #productInputContainer,
+#wrapPresetCustomer, #wrapPresetHeader, #wrapPresetTable, #sideMenuContainer{
+    background-color: #ffffff;
+}
+
+#wrapPresetHeader QPushButton{
+    border: none;
+}
+
+#wrapPresetTable QTableView{
+    color: #000;
+    border: none;
+}
+
+#billMenuSection QPushButton{
+    border: none;
+    font-weight: bold;
+    color: #aab1bb;
+}
+
+#checkStatusButton{
+    border: 2px solid #7bae38;
+    color: #7bae38;
+    border-radius: 15px;
+}
+
+#checkStatusButton:hover{
+    background-color: #7bae38;
+    color: #fff;
+}
+
+#checkStatusButton:pressed{
+    background-color: #598c17;
+    color: #ffffff;
+    border: 2px solid #598c17;
+}
+
+#subStatusTitle{
+    color: #aab1bb;
+}
+
+#statusIcon{
+    border: none;
+}
+
+#billMenuSection QPushButton:checked{
+    border-bottom: 2px solid #7bae38;
+    color: #7bae38;
+    font-weight: bold;
+}
+
+#billTitle{
+    color: #7bae38;
+}
+
+#upperMenuWrapper QPushButton{
+    border: none;
+}
+
+#lowerMenuWrapper QPushButton{
+    border: none;
+}
+
+#upperMenuWrapper QFrame:hover{
+    background-color: #f3f5f7;
+}
+
+#lowerMenuWrapper QFrame:hover{
+    background-color: #f3f5f7;
+}
+
+#upperMenuWrapper QPushButton:hover{
+    background-color: #f3f5f7;
+}
+
+#upperMenuWrapper QPushButton:hover{
+    background-color: #f3f5f7;
+    border-left: 4px solid #7bae38;
+}
+
+#upperMenuWrapper QPushButton:checked{
+    border-left: 4px solid #7bae38;
+}
+
+#billInputContainer QPushButton{
+    border: none;
+}
+
+#addCustomerDataToPreset{
+    background-color: #5DADE2;
+    color: #fff;
+    border-radius: 15px;
+}
+#addCustomerDataToPreset:hover{
+    background-color: #288aca;
+}
+
+#addCustomerDataToPreset:pressed{
+    background-color: #5DADE2;
+    color: #ffffff;
+}
+
+#addProductDataToPreset:pressed{
+    background-color: #58D68D;
+    color: #ffffff;
+}
+
+#addProductDataToPreset{
+    background-color: #58D68D;
+    color: #fff;
+    border-radius: 15px;
+}
+#addProductDataToPreset:hover{
+    background-color: #2db867;
+}
+
+#productInputContainer QLineEdit:focus{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #2db867;
+}
+
+#generatePresetButton{
+    background-color: #7bae38;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#generatePresetButton:hover{
+    background-color: #4d7b10;
+}
+
+#generatePresetButton:pressed{
+    background-color: #7bae38;
+}
+
+#clearProductPresetButton{
+    background-color: #EC7063;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#clearProductPresetButton:hover{
+    background-color: #d04636;
+}
+
+#clearProductPresetButton:pressed{
+    background-color: #EC7063;
+}
+
+#editProductPresetButton{
+    background-color: #F4D03F;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#editProductPresetButton:hover{
+    background-color: #d6b11d;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#editProductPresetButton:pressed{
+    background-color: #F4D03F;
+}
+
+QHeaderView::section {
+    border: none;
+    font-weight: bold;
+    background-color: #fff;
+    color: #7bae38;
+}
+
+QTableView::item:selected {
+    background-color: #7bae38;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+}
+
+QTableView::item:hover {
+    background-color: #7bae38;
+}
