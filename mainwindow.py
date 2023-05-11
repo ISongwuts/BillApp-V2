@@ -60,7 +60,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def declareVariables(self):
         self.button_icons = {
             'home': {'active': 'assets/icon/hover/house-solid.svg', 'inactive': 'assets/icon/light/house-solid.svg'},
-            'customer': {'active': 'assets/icon/hover/users-solid.svg', 'inactive': 'assets/icon/light/users-solid.svg'},
+            'database': {'active': 'assets/icon/hover/database-solid.svg', 'inactive': 'assets/icon/light/database-solid.svg'},
             'product': {'active': 'assets/icon/hover/box-open-solid.svg', 'inactive': 'assets/icon/light/box-open-solid.svg'},
             'analysis': {'active': 'assets/icon/hover/chart-simple-solid.svg', 'inactive': 'assets/icon/light/chart-simple-solid.svg'},
             'history': {'active': 'assets/icon/hover/clock-rotate-left-solid.svg', 'inactive': 'assets/icon/light/clock-rotate-left-solid.svg'},
@@ -77,13 +77,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def onClickedButton(self):
         self.homeButton.clicked.connect(partial(self.setMainMenuStackPages, self.homePage, self.homeButton))
-        self.customerButton.clicked.connect(partial(self.setMainMenuStackPages, self.customerPage, self.customerButton))
-        self.productButton.clicked.connect(partial(self.setMainMenuStackPages, self.productPage, self.productButton))
+        self.databaseButton.clicked.connect(partial(self.setMainMenuStackPages, self.databasePage, self.databaseButton))
+        self.productButton.clicked.connect(partial(self.setMainMenuStackPages, self.somePage, self.productButton))
         self.analysisButton.clicked.connect(partial(self.setMainMenuStackPages, self.analysisPage, self.analysisButton))
         self.historyButton.clicked.connect(partial(self.setMainMenuStackPages, self.historyPage, self.historyButton))
 
         self.goToBillInputPage.clicked.connect(partial(self.setSubMenuStackPages, self.billInputPage, self.goToBillInputPage))
         self.goToBillPreviewPage.clicked.connect(partial(self.setSubMenuStackPages, self.billPreviewPage, self.goToBillPreviewPage))
+
+        self.goToCustomerInputPage.clicked.connect(partial(self.setSubMenuStackPages, self.customerPage, self.goToCustomerInputPage))
+        self.goToProductInputPage.clicked.connect(partial(self.setSubMenuStackPages, self.productPage, self.goToProductInputPage))
 
         self.switchModeButton.clicked.connect(self.onModeChanged)
 
@@ -104,9 +107,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setStyleSheet(style_sheet)
 
     def setSubMenuStackPages(self, where, clicked_button):
-        self.subMenuStackPages.setCurrentWidget(where)
+        if clicked_button in [self.goToBillInputPage, self.goToBillPreviewPage]:
+            self.subMenuStackPages.setCurrentWidget(where)
+        else:
+            self.subMenuStackPages_2.setCurrentWidget(where)
         # Set the other buttons to be unchecked
-        for button in [self.goToBillInputPage, self.goToBillPreviewPage]:
+        for button in [self.goToBillInputPage, self.goToBillPreviewPage, self.goToCustomerInputPage, self.goToProductInputPage]:
             if button != clicked_button:
                 button.setChecked(False)
             else:
@@ -116,7 +122,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def setMainMenuStackPages(self, where, clicked_button):
         self.stackPages.setCurrentWidget(where)
         # Set the other buttons to be unchecked
-        for button_key, button in zip(self.button_icons.keys(), [self.homeButton, self.customerButton, self.productButton, self.analysisButton, self.historyButton]):
+        for button_key, button in zip(self.button_icons.keys(), [self.homeButton, self.databaseButton, self.productButton, self.analysisButton, self.historyButton]):
             if button != clicked_button:
                 button.setChecked(False)
                 self.setActiveIcons(button, button_key)

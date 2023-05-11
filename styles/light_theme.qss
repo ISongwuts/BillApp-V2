@@ -1,5 +1,10 @@
+*{
+    color: #000;
+}
+
 #mainContainer, #contentWrapper, #billInputContainer, 
-#stackPages, #subMenuStackPages, #billProductContainer{
+#stackPages, #subMenuStackPages, #billProductContainer, 
+#subMenuStackPages_2{
     background-color: #f6f9fc;
 }
 
@@ -27,7 +32,7 @@ QScrollBar::handle:vertical {
     border-radius: 3px; /* Add border-radius */
 }
 
-#billPreviewPage{
+#billPreview, #databasePage{
     background-color: #f6f9fc;
 }
 
@@ -42,7 +47,7 @@ QScrollBar::handle:vertical {
 #scrollAreaWidgetContents{
     background-color: #f6f9fc;
 }
-#scrollAreaWidgetContents_2{
+#scrollAreaWidgetContents_2, #scrollAreaWidgetContents_3, #scrollAreaWidgetContents_4{
     background-color: #f6f9fc;
 }
 #blankLineEdit{
@@ -68,7 +73,7 @@ QScrollBar::handle:vertical {
     border: none;
 }
 
-#billMenuSection QPushButton{
+#billMenuSection QPushButton, #databaseMenuSection QPushButton{
     border: none;
     font-weight: bold;
     color: #aab1bb;
@@ -88,7 +93,6 @@ QScrollBar::handle:vertical {
 #checkStatusButton:pressed{
     background-color: #598c17;
     color: #ffffff;
-    border: 2px solid #598c17;
 }
 
 #subStatusTitle{
@@ -99,10 +103,24 @@ QScrollBar::handle:vertical {
     border: none;
 }
 
-#billMenuSection QPushButton:checked{
+#billMenuSection QPushButton:checked, #databaseMenuSection QPushButton:checked{
     border-bottom: 2px solid #7bae38;
     color: #7bae38;
     font-weight: bold;
+}
+
+#printBillButton{
+    background-color: #7bae38;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#printBillButton:hover{
+    background-color: #4d7b10;
+}
+
+#printBillButton:pressed{
+    background-color: #7bae38;
 }
 
 #billTitle{
